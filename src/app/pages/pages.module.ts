@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { SectionsModule } from '../sections/sections.module';
 import { ServicesComponent } from './services/services.component';
 import { ContactComponent } from './contact/contact.component';
+import { TariffComponent } from './tariff/tariff.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ContactComponent } from './contact/contact.component';
     HomeComponent,
     AboutComponent,
     ServicesComponent,
-    ContactComponent
+    ContactComponent,
+    TariffComponent
   ],
   imports: [
     CommonModule,

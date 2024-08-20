@@ -1,0 +1,36 @@
+<!-- Page Header Start -->
+<div class="container-fluid page-header">
+    <h1 class="display-3 text-uppercase text-white mb-3">Tariff</h1>
+    <div class="d-inline-flex text-white">
+        <h6 class="text-uppercase m-0"><a class="text-white" href="">Home</a></h6>
+        <h6 class="text-body m-0 px-3">/</h6>
+        <h6 class="text-uppercase text-body m-0">Tariff</h6>
+    </div>
+</div>
+<!-- Page Header Start -->
+
+<div class="container mt-5">
+    <div class="row row-cols-1 row-cols-md-3">
+        <div class="col mb-4" *ngFor="let tariff of tarrifs">
+            <div class="card text-center h-100">
+                <div class="card-header text-uppercase">
+                   <h4>{{tariff.class}}</h4> 
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{tariff.baseCost}} - {{tariff.maxCost}}</h5>
+                    <hr>
+                    <p class="card-text">Hours : {{tariff.hours}}</p>
+                    <hr>
+                    <p class="card-text">Fuel : {{tariff.fuel}}</p>
+                    <hr>
+                    <p class="card-text">Beyond {{tariff.kms}} kms: {{tariff.extraCharge}}</p>
+                    <hr>
+                    <b>{{tariff.kms}} kms</b>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Book</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
