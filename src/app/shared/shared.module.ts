@@ -3,21 +3,28 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
+import { DialogComponent } from './dialog/dialog.component';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    DialogComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    DialogModule,
+    ButtonModule
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    DialogComponent
   ]
 })
 export class SharedModule { }

@@ -122,7 +122,7 @@
                         style="width: 100px; height: 100px;">
                         <i class="fa fa-2x fa-map-marker-alt text-secondary"></i>
                     </div>
-                    <h4 class="text-uppercase m-0">Lots Of Pickup Locations</h4>
+                    <h4 class="text-uppercase m-0">Travel without no hiccups</h4>
                 </div>
             </div>
         </div>
@@ -141,10 +141,10 @@
     <div class="container py-5">
         <div class="bg-banner py-5 px-4 text-center">
             <div class="py-5">
-                <h1 class="display-1 text-uppercase text-primary mb-4">25% OFF</h1>
+                <h1 class="display-1 text-uppercase text-primary mb-4">Budget Friendly</h1>
                 <h1 class="text-uppercase text-light mb-4">Special Offer For New Members</h1>
                 <!-- <p class="mb-4">Only for Sunday from 1st Jan to 30th Jan 2045</p> -->
-                <a class="btn btn-primary mt-2 py-3 px-5" href="">Book Now</a>
+                <p class="btn btn-primary mt-2 py-3 px-5" (click)="OpenBooking()">Book Now</p>
             </div>
         </div>
     </div>
@@ -158,130 +158,25 @@
         <h1 class="display-1 text-primary text-center">03</h1>
         <h1 class="display-4 text-uppercase text-center mb-5">Find Your Car</h1>
         <div class="row">
-            <div class="col-lg-4 col-md-6 mb-2">
+            <div class="col-lg-4 col-md-6 mb-2" *ngFor="let car of carsForRent">
                 <div class="rent-item mb-4">
-                    <img class="img-fluid mb-4" src="assets/img/car-rent-1.png" alt="">
-                    <h4 class="text-uppercase mb-4">Mercedes Benz R3</h4>
+                    <img class="mb-4" height="200" [src]="car.image" alt="">
+                    <h4 class="text-uppercase mb-4">{{ car.name }}</h4>
                     <div class="d-flex justify-content-center mb-4">
-                        <div class="px-2">
+                        <!-- <div class="px-2">
                             <i class="fa fa-car text-primary mr-1"></i>
                             <span>2015</span>
-                        </div>
-                        <div class="px-2 border-left border-right">
-                            <i class="fa fa-cogs text-primary mr-1"></i>
-                            <span>AUTO</span>
-                        </div>
+                        </div> -->
                         <div class="px-2">
+                            <i class="fa fa-cogs text-primary mr-1"></i>
+                            <span>Transmission : {{ car.specs.type }}</span>
+                        </div>
+                        <!-- <div class="px-2">
                             <i class="fa fa-road text-primary mr-1"></i>
                             <span>25K</span>
-                        </div>
+                        </div> -->
                     </div>
-                    <a class="btn btn-primary px-3" href="">$99.00/Day</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-2">
-                <div class="rent-item active mb-4">
-                    <img class="img-fluid mb-4" src="assets/img/car-rent-2.png" alt="">
-                    <h4 class="text-uppercase mb-4">Mercedes Benz R3</h4>
-                    <div class="d-flex justify-content-center mb-4">
-                        <div class="px-2">
-                            <i class="fa fa-car text-primary mr-1"></i>
-                            <span>2015</span>
-                        </div>
-                        <div class="px-2 border-left border-right">
-                            <i class="fa fa-cogs text-primary mr-1"></i>
-                            <span>AUTO</span>
-                        </div>
-                        <div class="px-2">
-                            <i class="fa fa-road text-primary mr-1"></i>
-                            <span>25K</span>
-                        </div>
-                    </div>
-                    <a class="btn btn-primary px-3" href="">$99.00/Day</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-2">
-                <div class="rent-item mb-4">
-                    <img class="img-fluid mb-4" src="assets/img/car-rent-3.png" alt="">
-                    <h4 class="text-uppercase mb-4">Mercedes Benz R3</h4>
-                    <div class="d-flex justify-content-center mb-4">
-                        <div class="px-2">
-                            <i class="fa fa-car text-primary mr-1"></i>
-                            <span>2015</span>
-                        </div>
-                        <div class="px-2 border-left border-right">
-                            <i class="fa fa-cogs text-primary mr-1"></i>
-                            <span>AUTO</span>
-                        </div>
-                        <div class="px-2">
-                            <i class="fa fa-road text-primary mr-1"></i>
-                            <span>25K</span>
-                        </div>
-                    </div>
-                    <a class="btn btn-primary px-3" href="">$99.00/Day</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-2">
-                <div class="rent-item mb-4">
-                    <img class="img-fluid mb-4" src="assets/img/car-rent-4.png" alt="">
-                    <h4 class="text-uppercase mb-4">Mercedes Benz R3</h4>
-                    <div class="d-flex justify-content-center mb-4">
-                        <div class="px-2">
-                            <i class="fa fa-car text-primary mr-1"></i>
-                            <span>2015</span>
-                        </div>
-                        <div class="px-2 border-left border-right">
-                            <i class="fa fa-cogs text-primary mr-1"></i>
-                            <span>AUTO</span>
-                        </div>
-                        <div class="px-2">
-                            <i class="fa fa-road text-primary mr-1"></i>
-                            <span>25K</span>
-                        </div>
-                    </div>
-                    <a class="btn btn-primary px-3" href="">$99.00/Day</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-2">
-                <div class="rent-item mb-4">
-                    <img class="img-fluid mb-4" src="assets/img/car-rent-5.png" alt="">
-                    <h4 class="text-uppercase mb-4">Mercedes Benz R3</h4>
-                    <div class="d-flex justify-content-center mb-4">
-                        <div class="px-2">
-                            <i class="fa fa-car text-primary mr-1"></i>
-                            <span>2015</span>
-                        </div>
-                        <div class="px-2 border-left border-right">
-                            <i class="fa fa-cogs text-primary mr-1"></i>
-                            <span>AUTO</span>
-                        </div>
-                        <div class="px-2">
-                            <i class="fa fa-road text-primary mr-1"></i>
-                            <span>25K</span>
-                        </div>
-                    </div>
-                    <a class="btn btn-primary px-3" href="">$99.00/Day</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-2">
-                <div class="rent-item mb-4">
-                    <img class="img-fluid mb-4" src="assets/img/car-rent-6.png" alt="">
-                    <h4 class="text-uppercase mb-4">Mercedes Benz R3</h4>
-                    <div class="d-flex justify-content-center mb-4">
-                        <div class="px-2">
-                            <i class="fa fa-car text-primary mr-1"></i>
-                            <span>2015</span>
-                        </div>
-                        <div class="px-2 border-left border-right">
-                            <i class="fa fa-cogs text-primary mr-1"></i>
-                            <span>AUTO</span>
-                        </div>
-                        <div class="px-2">
-                            <i class="fa fa-road text-primary mr-1"></i>
-                            <span>25K</span>
-                        </div>
-                    </div>
-                    <a class="btn btn-primary px-3" href="">$99.00/Day</a>
+                    <a class="btn btn-primary px-3" href="">₹ {{ car.specs.price }} / Day</a>
                 </div>
             </div>
         </div>
