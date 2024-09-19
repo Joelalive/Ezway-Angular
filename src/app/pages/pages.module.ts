@@ -8,6 +8,8 @@ import { SectionsModule } from '../sections/sections.module';
 import { ServicesComponent } from './services/services.component';
 import { ContactComponent } from './contact/contact.component';
 import { TariffComponent } from './tariff/tariff.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { TariffComponent } from './tariff/tariff.component';
     AboutComponent,
     ServicesComponent,
     ContactComponent,
-    TariffComponent
+    TariffComponent,
+    PrivacyPolicyComponent,
+    TermsAndConditionsComponent
   ],
   imports: [
     CommonModule,

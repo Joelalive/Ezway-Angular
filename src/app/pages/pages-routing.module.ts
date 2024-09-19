@@ -5,6 +5,8 @@ import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { ContactComponent } from './contact/contact.component';
 import { TariffComponent } from './tariff/tariff.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,14 @@ const routes: Routes = [
   {
     path: 'tariff',
     component: TariffComponent
+  },
+  {
+    path: 'privacy-policy',
+    component: PrivacyPolicyComponent
+  },
+  {
+    path: 'terms-and-conditions',
+    component: TermsAndConditionsComponent
   },
 ];
 
