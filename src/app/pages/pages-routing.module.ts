@@ -11,8 +11,8 @@ import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-co
 const routes: Routes = [
   {
     path: '',
+    component: HomeComponent,
     pathMatch: 'full',
-    redirectTo: 'home'
   },
   {
     path: 'home',
