@@ -20,8 +20,8 @@ export class ServiceSectionComponent implements OnInit {
         icon: 'fa-taxi'
       },
       {
-        name: 'No Hidden Charges',
-        description: '.',
+        name: 'Exceptional Value Assurance',
+        description: 'We aim to provide the best pricing that offers great value for our customers.',
         icon: 'fa-money-check-alt'
       },
       {
