@@ -1,5 +1,6 @@
+import { CarView } from 'src/app/sections/cars-section/cars.interface';
+import { AppConstants } from './../../shared/common/app.constants';
 import { Component } from '@angular/core';
-import { DialogService } from 'src/app/shared/dialog/dialog.service';
 
 @Component({
   selector: 'app-home',
@@ -8,69 +9,18 @@ import { DialogService } from 'src/app/shared/dialog/dialog.service';
 })
 export class HomeComponent {
 
-  constructor(private dialogService: DialogService) {
+  appConstants = AppConstants;
 
+  carProperties: CarView = {
+    limitedView: true,
+    defaultCarsCount: 6,
+    sorted: true,
+    shuffle: true
   }
 
-  OpenBooking() {
-    const dialogContent = {
-      status: true,
-      content: {}
-    }
-    this.dialogService.dialogChanges(dialogContent);
+  getWhatsappContact() {
+    return `https://wa.me/${AppConstants.CONTACT_NUMBER}?text=${AppConstants.BOOKING_MESSAGE}`;
   }
-
-  carsForRent = [
-    {
-      image: 'assets/img/car-rent-1.png',
-      name: 'Jeep Compass',
-      specs: {
-        price: '2000',
-        type: 'Manual'
-      }
-    },
-    {
-      image: 'assets/img/car-rent-2.png',
-      name: 'Volkswagen Vento',
-      specs: {
-        price: '2000',
-        type: 'Manual'
-      }
-    },
-    {
-      image: 'assets/img/car-rent-3.png',
-      name: 'Ford Ecosport',
-      specs: {
-        price: '2000',
-        type: 'Manual'
-      }
-    },
-    {
-      image: 'assets/img/car-rent-4.png',
-      name: 'Suzuki Baleno',
-      specs: {
-        price: '2000',
-        type: 'Manual'
-      }
-    },
-    {
-      image: 'assets/img/car-rent-5.png',
-      name: 'Tata Altroz',
-      specs: {
-        price: '2000',
-        type: 'Manual'
-      }
-    },
-    {
-      image: 'assets/img/car-rent-6.png',
-      name: 'Kia Seltos',
-      specs: {
-        price: '2000',
-        type: 'Manual'
-      }
-    }
-  ];
-
 
 
 }

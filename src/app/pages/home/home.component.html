@@ -55,7 +55,7 @@
                     <div class="p-3" style="max-width: 900px;">
                         <h4 class="text-white text-uppercase mb-md-3">Rent A Car</h4>
                         <h1 class="display-1 text-white mb-md-4">Best Rental Cars In Your Location</h1>
-                        <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Reserve Now</a>
+                        <a [href]="getWhatsappContact()" class="btn btn-primary py-md-3 px-md-5 mt-2">Reserve Now</a>
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                     <div class="p-3" style="max-width: 900px;">
                         <h4 class="text-white text-uppercase mb-md-3">Rent A Car</h4>
                         <h1 class="display-1 text-white mb-md-4">Quality Cars with Unlimited Miles</h1>
-                        <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Reserve Now</a>
+                        <a [href]="getWhatsappContact()" class="btn btn-primary py-md-3 px-md-5 mt-2">Reserve Now</a>
                     </div>
                 </div>
             </div>
@@ -148,7 +148,7 @@
                 <h1 class="display-1 text-uppercase text-primary mb-4">Budget Friendly</h1>
                 <h1 class="text-uppercase text-light mb-4">All kinds of cars to fit your needs</h1>
                 <!-- <p class="mb-4">Only for Sunday from 1st Jan to 30th Jan 2045</p> -->
-                <p class="btn btn-primary mt-2 py-3 px-5" (click)="OpenBooking()">Book Now</p>
+                <a class="btn btn-primary mt-2 py-3 px-5" [href]="getWhatsappContact()">Book Now</a>
             </div>
         </div>
     </div>
@@ -158,32 +158,11 @@
 
 <!-- Rent A Car Start -->
 <div class="container-fluid py-5">
-    <div class="container pt-5 pb-3">
+    <div class="container pt-5 pb-3 text-center">
         <h1 class="display-1 text-primary text-center">03</h1>
         <h1 class="display-4 text-uppercase text-center mb-5">Find Your Car</h1>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-2" *ngFor="let car of carsForRent">
-                <div class="rent-item mb-4">
-                    <img class="mb-4" height="200" [src]="car.image" alt="">
-                    <h4 class="text-uppercase mb-4">{{ car.name }}</h4>
-                    <div class="d-flex justify-content-center mb-4">
-                        <!-- <div class="px-2">
-                            <i class="fa fa-car text-primary mr-1"></i>
-                            <span>2015</span>
-                        </div> -->
-                        <div class="px-2">
-                            <i class="fa fa-cogs text-primary mr-1"></i>
-                            <span>Transmission : {{ car.specs.type }}</span>
-                        </div>
-                        <!-- <div class="px-2">
-                            <i class="fa fa-road text-primary mr-1"></i>
-                            <span>25K</span>
-                        </div> -->
-                    </div>
-                    <a class="btn btn-primary px-3" href="">₹ {{ car.specs.price }} / Day</a>
-                </div>
-            </div>
-        </div>
+        <app-cars-section [viewProperties]="carProperties"></app-cars-section>
+        <a class="btn btn-primary mt-2 py-3 px-5" routerLink="/cars">View All Cars</a>
     </div>
 </div>
 <!-- Rent A Car End -->
@@ -199,7 +178,7 @@
                     <div class="text-right">
                         <h3 class="text-uppercase text-light mb-3">Want to be driver?</h3>
                         <p class="mb-4">Join our team of excellent drivers and be a part of our journey.</p>
-                        <a class="btn btn-primary py-2 px-4" href="">Start Now</a>
+                        <a class="btn btn-primary py-2 px-4" [href]="getWhatsappContact()">Start Now</a>
                     </div>
                 </div>
             </div>
@@ -208,7 +187,7 @@
                     <div class="text-left">
                         <h3 class="text-uppercase text-light mb-3">Looking for a car?</h3>
                         <p class="mb-4">Choose from our list of different types of car for your trip.</p>
-                        <a class="btn btn-primary py-2 px-4" href="">Start Now</a>
+                        <a class="btn btn-primary py-2 px-4" [href]="getWhatsappContact()">Start Now</a>
                     </div>
                     <img class="img-fluid flex-shrink-0 mr-n5 w-50 ml-4" src="assets/img/banner-right.png" alt="">
                 </div>
@@ -227,27 +206,8 @@
         <div class="row">
             <div class="col-lg-7 mb-2">
                 <div class="contact-form bg-light mb-4" style="padding: 30px;">
-                    <form>
-                        <div class="row">
-                            <div class="col-6 form-group">
-                                <input type="text" class="form-control p-4" placeholder="Your Name" required="required">
-                            </div>
-                            <div class="col-6 form-group">
-                                <input type="email" class="form-control p-4" placeholder="Your Email"
-                                    required="required">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control p-4" placeholder="Subject" required="required">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control py-3 px-4" rows="5" placeholder="Message"
-                                required="required"></textarea>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
-                        </div>
-                    </form>
+                    <app-contact-form-section></app-contact-form-section>
+
                 </div>
             </div>
             <div class="col-lg-5 mb-2">
@@ -271,16 +231,16 @@
                         <i class="fa fa-2x fa-envelope-open text-primary flex-shrink-0 mr-3"></i>
                         <div class="mt-n1">
                             <h5 class="text-light">Customer Service</h5>
-                            <p>customer@example.com</p>
+                            <p>{{ appConstants.EMAIL }}</p>
                         </div>
                     </div>
-                    <div class="d-flex">
+                    <!-- <div class="d-flex">
                         <i class="fa fa-2x fa-envelope-open text-primary flex-shrink-0 mr-3"></i>
                         <div class="mt-n1">
                             <h5 class="text-light">Return & Refund</h5>
                             <p class="m-0">refund@example.com</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

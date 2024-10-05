@@ -18,6 +18,7 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@emailjs/browser": "^4.4.1",
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
     "jquery.easing": "^1.4.1",

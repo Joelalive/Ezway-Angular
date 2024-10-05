@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { TariffComponent } from './tariff/tariff.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
+import { CarsComponent } from './cars/cars.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'services',
     component: ServicesComponent
+  },
+  {
+    path: 'cars',
+    component: CarsComponent
   },
   {
     path: 'contact',

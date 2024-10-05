@@ -1,3 +1,4 @@
+import { AppConstants } from './../../shared/common/app.constants';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-
+ appConstants = AppConstants;
 }

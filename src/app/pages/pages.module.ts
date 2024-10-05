@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { TariffComponent } from './tariff/tariff.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
+import { CarsComponent } from './cars/cars.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-co
     ContactComponent,
     TariffComponent,
     PrivacyPolicyComponent,
-    TermsAndConditionsComponent
+    TermsAndConditionsComponent,
+    CarsComponent
   ],
   imports: [
     CommonModule,

@@ -13,7 +13,7 @@ import { DialogComponent } from './dialog/dialog.component';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    DialogComponent
+    DialogComponent,
   ],
   imports: [
     CommonModule,
@@ -24,7 +24,7 @@ import { DialogComponent } from './dialog/dialog.component';
   exports: [
     HeaderComponent,
     FooterComponent,
-    DialogComponent
+    DialogComponent  
   ]
 })
 export class SharedModule { }
