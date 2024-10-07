@@ -121,6 +121,86 @@ export class CarsSectionComponent {
         price: 1600,
         type: 'Manual'
       }
+    },
+    {
+      image: 'assets/img/car-rent-14.png',
+      name: 'Toyota Innova',
+      specs: {
+        price: 3000,
+        type: 'Manual'
+      }
+    },
+    {
+      image: 'assets/img/car-rent-15.png',
+      name: 'Toyota Innova Crysta',
+      specs: {
+        price: 4000,
+        type: 'Manual'
+      }
+    },
+    {
+      image: 'assets/img/car-rent-16.png',
+      name: 'Mahindra XUV700',
+      specs: {
+        price: 4000,
+        type: 'Manual'
+      }
+    },
+    {
+      image: 'assets/img/car-rent-17.png',
+      name: 'Hyundai i20',
+      specs: {
+        price: 2500,
+        type: 'Manual'
+      }
+    },
+    {
+      image: 'assets/img/car-rent-18.png',
+      name: 'Hyundai Creta',
+      specs: {
+        price: 2800,
+        type: 'Manual'
+      }
+    },
+    {
+      image: 'assets/img/car-rent-19.png',
+      name: 'Honda Amaze',
+      specs: {
+        price: 2200,
+        type: 'Manual'
+      }
+    },
+    {
+      image: 'assets/img/car-rent-20.png',
+      name: 'Suzuki Ciaz',
+      specs: {
+        price: 2100,
+        type: 'Manual'
+      }
+    },
+    {
+      image: 'assets/img/car-rent-21.png',
+      name: 'Suzuki Brezza',
+      specs: {
+        price: 2500,
+        type: 'Manual'
+      }
+    },
+    {
+      image: 'assets/img/car-rent-23.png',
+      name: 'Suzuki Wagon R',
+      specs: {
+        price: 1800,
+        type: 'Manual'
+      }
+    },
+    {
+      image: 'assets/img/car-rent-22.png',
+      name: 'Renault Kwid',
+      specs: {
+        price: 1500,
+        type: 'Manual'
+      }
     }
   ];
 

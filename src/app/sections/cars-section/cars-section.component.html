@@ -1,7 +1,7 @@
 <div class="row justify-content-center">
-    <div class="col-lg-4 col-md-6 mb-2" *ngFor="let car of getCars(viewProperties.sorted, viewProperties.shuffle) | slice:0: viewProperties.limitedView ? viewProperties.defaultCarsCount : carsForRent.length ; let i=index">
+    <div class="col-lg-4 col-md-6 mb-2 d-flex" *ngFor="let car of getCars(viewProperties.sorted, viewProperties.shuffle) | slice:0: viewProperties.limitedView ? viewProperties.defaultCarsCount : carsForRent.length ; let i=index">
         <div class="rent-item mb-4">
-            <img class="mb-4" height="200" [src]="car.image" alt="">
+            <img class="mb-4 img-fluid img-rounded" [src]="car.image" alt="">
             <h4 class="text-uppercase mb-4">{{ car.name }}</h4>
             <div class="d-flex justify-content-center mb-4">
                 <!-- <div class="px-2">

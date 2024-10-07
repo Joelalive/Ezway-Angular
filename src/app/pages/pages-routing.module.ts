@@ -8,6 +8,8 @@ import { TariffComponent } from './tariff/tariff.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 import { CarsComponent } from './cars/cars.component';
+import { FaqComponent } from './faq/faq.component';
+import { BookingPolicyComponent } from './booking-policy/booking-policy.component';
 
 const routes: Routes = [
   {
@@ -40,8 +42,16 @@ const routes: Routes = [
     component: TariffComponent
   },
   {
+    path: 'faqs',
+    component: FaqComponent
+  },
+  {
     path: 'privacy-policy',
     component: PrivacyPolicyComponent
+  },
+  {
+    path: 'booking-policy',
+    component: BookingPolicyComponent
   },
   {
     path: 'terms-and-conditions',
