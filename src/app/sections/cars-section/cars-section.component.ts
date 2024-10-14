@@ -30,7 +30,7 @@ export class CarsSectionComponent {
       image: 'assets/img/car-rent-2.png',
       name: 'Volkswagen Vento',
       specs: {
-        price: 3000,
+        price: 2500,
         type: 'Manual'
       }
     },
@@ -62,7 +62,7 @@ export class CarsSectionComponent {
       image: 'assets/img/car-rent-6.png',
       name: 'Kia Seltos',
       specs: {
-        price: 3000,
+        price: 3500,
         type: 'Manual'
       }
     },
@@ -142,7 +142,7 @@ export class CarsSectionComponent {
       image: 'assets/img/car-rent-16.png',
       name: 'Mahindra XUV700',
       specs: {
-        price: 4000,
+        price: 4500,
         type: 'Manual'
       }
     },
@@ -158,7 +158,7 @@ export class CarsSectionComponent {
       image: 'assets/img/car-rent-18.png',
       name: 'Hyundai Creta',
       specs: {
-        price: 2800,
+        price: 3500,
         type: 'Manual'
       }
     },
@@ -174,7 +174,7 @@ export class CarsSectionComponent {
       image: 'assets/img/car-rent-20.png',
       name: 'Suzuki Ciaz',
       specs: {
-        price: 2100,
+        price: 2500,
         type: 'Manual'
       }
     },
@@ -190,7 +190,7 @@ export class CarsSectionComponent {
       image: 'assets/img/car-rent-23.png',
       name: 'Suzuki Wagon R',
       specs: {
-        price: 1800,
+        price: 1500,
         type: 'Manual'
       }
     },
